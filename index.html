@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    function initialize() {
+      var myLatLng = {lat: -25.363, lng: 131.044};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: myLatLng
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: 'cute_taco.png',
+        animation: google.maps.Animation.DROP
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <title></title>
+  </head>
+  <body>
+    <div id="map" style="width:500px;height:380px;"></div>
+  </body>
+</html>
